@@ -9,7 +9,7 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
-console.log("is it running ")
+
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
@@ -48,13 +48,8 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
-        console.log("now running on web")
         registerValidSW(swUrl, config);
       }
-      window.addEventListener('push',()=>{
-        window.registration.sendNotification('test msg',{})
-      })
-      console.log("service started")
     });
   }
 }
