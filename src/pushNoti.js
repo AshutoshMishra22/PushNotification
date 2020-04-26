@@ -16,7 +16,7 @@ import React from 'react'
     // //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
 
     const PushNoti =()=>{
-        const onConfirmation=()=>{
+        function onConfirmation(){
             console.log("Granted And .....")
             new Notification("Successful TO get Notify")
         }
