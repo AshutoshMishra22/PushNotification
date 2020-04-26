@@ -7,7 +7,7 @@ async function subsciber(key){
     userVisibleOnly:true,
     applicationServerKey:key
   })
-  console.log(JSON.stringify(push),"===push---")
+  console.log(JSON.stringify(push),"===push---",key)
 }
 
 const PushNoti =()=>{
