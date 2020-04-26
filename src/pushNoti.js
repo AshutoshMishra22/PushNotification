@@ -17,6 +17,7 @@ import React from 'react'
 
     const PushNoti =()=>{
         const onConfirmation=()=>{
+            console.log("Granted And .....")
             new Notification("Successful TO get Notify")
         }
         const subsciber=()=>{
