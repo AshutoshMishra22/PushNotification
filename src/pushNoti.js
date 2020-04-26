@@ -16,6 +16,9 @@ import React from 'react'
     // //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
 
     const PushNoti =()=>{
+        const onConfirmation=()=>{
+            new Notification("Successful TO get Notify")
+        }
         const subsciber=()=>{
             Notification.requestPermission((result)=>{
                 console.log(result)
@@ -23,7 +26,7 @@ import React from 'react'
                     console.log("Permission NOT Granted")
                 }
                 else{
-
+                    onConfirmation()
                 }
             })
         }
