@@ -19,7 +19,7 @@ import React from 'react'
         function onConfirmation(){
             console.log("Granted And .....")
             if ('serviceWorker' in navigator){
-                navigator.serviceworker.ready
+                navigator.serviceWorker.ready
                 .then((reg)=>{
                     reg.showNotification("Successful TO get Notify By SW")
                 })
