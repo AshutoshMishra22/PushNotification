@@ -18,13 +18,14 @@ import React from 'react'
     const PushNoti =()=>{
         function onConfirmation(){
             console.log("Granted And .....")
-            if ('serviceworker' in navigator){
+            if ('serviceWorker' in navigator){
                 navigator.serviceworker.ready
                 .then((reg)=>{
                     reg.showNotification("Successful TO get Notify By SW")
                 })
             }
             else{
+                console.log("No service Worker")
                 new Notification("Successful TO get Notify")
             }
             
