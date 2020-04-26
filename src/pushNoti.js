@@ -1,18 +1,21 @@
 import React from 'react'
-
-async function subsciber(){
+import Push from 'web-push'
+async function subsciber(key){
   let sw=await navigator.serviceWorker.ready;
   console.log(sw,"sw --")
   let push=sw.pushManager.subscribe({
     userVisibleOnly:true,
-    applicationServerKey:"BJGaXe-IYZQizmtz4lpqXTi0UNmOcq8dn169YZeayfzv8xCxFvG6ab9WmbLNTVSQiNfCaRI4q-bTCIqrxRt39uc"
+    applicationServerKey:key
   })
   console.log(JSON.stringify(push),"===push---")
 }
 
 const PushNoti =()=>{
+    const keySet=Push.generateVAPIDKeys()
+    //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
+    console.log(keySet)
 return(
-<button onClick={subsciber}>Push Me</button>
+<button onClick={subsciber(keySet.publicKey)}>Push Me</button>
 )
 }
 export default PushNoti

@@ -8,10 +8,14 @@ let keys={
     publicKey: "BJGaXe-IYZQizmtz4lpqXTi0UNmOcq8dn169YZeayfzv8xCxFvG6ab9WmbLNTVSQiNfCaRI4q-bTCIqrxRt39uc"
 }
 
-// let keySet=Push.generateVAPIDKeys()
-Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
 
-let sub ={
-
+const pushme=()=>{
+    const keySet=Push.generateVAPIDKeys()
+    //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
+    console.log(keySet)
+    // let sub ={
+    return()
+    // }
+    // Push.sendNotification(sub,"test Message")\
 }
-Push.sendNotification(sub,"test Message")
+export default pushme
