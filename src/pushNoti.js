@@ -17,7 +17,7 @@ const PushNoti =()=>{
     // //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
     // console.log(keySet,"KeySet")
 return(
-<button onClick={subsciber()}>Push Me</button>
+<button onClick={subsciber}>Push Me</button>
 )
 }
 export default PushNoti
