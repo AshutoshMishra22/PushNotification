@@ -18,7 +18,16 @@ import React from 'react'
     const PushNoti =()=>{
         function onConfirmation(){
             console.log("Granted And .....")
-            new Notification("Successful TO get Notify")
+            if ('serviceworker' in navigator){
+                navigator.serviceworker.ready
+                .then((reg)=>{
+                    reg.showNotification("Successful TO get Notify By SW")
+                })
+            }
+            else{
+                new Notification("Successful TO get Notify")
+            }
+            
         }
         const subsciber=()=>{
             Notification.requestPermission((result)=>{
