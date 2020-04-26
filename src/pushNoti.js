@@ -13,7 +13,7 @@ async function subsciber(key){
 const PushNoti =()=>{
     const keySet=Push.generateVAPIDKeys()
     //Push.setVapidDetails('mailto:ashutoshmishraofficial22@gmail.com',keys.publicKey,keys.privateKey)
-    console.log(keySet)
+    console.log(keySet,"KeySet")
 return(
 <button onClick={subsciber(keySet.publicKey)}>Push Me</button>
 )
