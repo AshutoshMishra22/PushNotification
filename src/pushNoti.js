@@ -43,7 +43,8 @@ import Push from 'web-push'
                     }
                 })
                 .then((newSub)=>{
-                    console.log(newSub,"New Subscription")
+                    console.log(JSON.stringify(newSub),"New Subscription")
+                    register.showNotification("this is a pUsh Notification ")
                 })
             }
             else{
