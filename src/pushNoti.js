@@ -29,13 +29,14 @@ import React from 'react'
                 .then((sub)=>{
                     if(sub!==null)
                     {
-
+                        console.log("Have subs")
                     }
                     else{
+                        console.log(register,"register")
+                        console.log(register.pushManager)
                         register.pushManager.subscibe({
                             userVisibleOnly:true,
                             applicationServerKey:"BBDmJat38JYt-ovOyTyUqP7y0ruHXW7qa3PIkfHKDLeq4zPX9eo9RgNKqAbDg4D2rO7llqgvBgJhs822KFUGcRI"
-
                         })
                     }
                 })
