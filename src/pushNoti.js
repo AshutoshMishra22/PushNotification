@@ -35,8 +35,8 @@ import Push from 'web-push'
                     }
                     else{
                         console.log(register,"register")
-                        console.log(register.pushManager.subscibe,register.pushManager)
-                        register.pushManager.subscibe({
+                        console.log(register.pushManager.subscribe,register.pushManager)
+                        register.pushManager.subscribe({
                             userVisibleOnly:true,
                             applicationServerKey:"BGm_wqYnJmPHV_AV1NAB-xMvQ6AUkX4zNwxgGMRUCQtRT6FMEABHszRYG0ibMwy36l64mx5uKsfCO_DRHmvlT-A"
                         })
