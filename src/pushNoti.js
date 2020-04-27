@@ -18,10 +18,29 @@ import React from 'react'
     const PushNoti =()=>{
         function onConfirmation(){
             console.log("Granted And .....")
+            var register
             if ('serviceWorker' in navigator){
                 navigator.serviceWorker.ready
                 .then((reg)=>{
-                    reg.showNotification("Successful TO get Notify By SW")
+                    register=reg
+                    //reg.showNotification("Successful TO get Notify By SW")
+                    return reg.pushManager.getSubscription()
+                })
+                .then((sub)=>{
+                    if(sub!==null)
+                    {
+
+                    }
+                    else{
+                        register.pushManager.subscibe({
+                            userVisibleOnly:true,
+                            applicationServerKey:"BBDmJat38JYt-ovOyTyUqP7y0ruHXW7qa3PIkfHKDLeq4zPX9eo9RgNKqAbDg4D2rO7llqgvBgJhs822KFUGcRI"
+
+                        })
+                    }
+                })
+                .then((newSub)=>{
+                    console.log(newSub,"New Subscription")
                 })
             }
             else{
@@ -30,6 +49,7 @@ import React from 'react'
             }
             
         }
+
         const subsciber=()=>{
             Notification.requestPermission((result)=>{
                 console.log(result)
