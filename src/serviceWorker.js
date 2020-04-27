@@ -89,6 +89,12 @@ function registerValidSW(swUrl, config) {
                 config.onSuccess(registration);
               }
             }
+            window.addEventListener('push',(event)=>{
+              console.log("Push Notification received",event,"registration",registration,window.registration)
+              event.waitUntill(
+                window.registration.showNotification("This is Original One")
+              )
+            })
           }
         };
       };
@@ -96,6 +102,7 @@ function registerValidSW(swUrl, config) {
     .catch(error => {
       console.error('Error during service worker registration:', error);
     });
+    
 }
 
 function checkValidServiceWorker(swUrl, config) {
