@@ -96,6 +96,12 @@ function registerValidSW(swUrl, config) {
                 window.registration.showNotification("This is Original One")
               )
             })
+            window.addEventListener('push',(event)=>{
+              console.log("Push Notification received",event,"registration",registration)
+              event.waitUntill(
+                registration.showNotification("This is Original two")
+              )
+            })
           }
         };
       };
