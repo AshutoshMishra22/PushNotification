@@ -32,6 +32,7 @@ import Push from 'web-push'
                     if(sub!==null)
                     {
                         console.log("Have subs")
+                        return(sub)
                     }
                     else{
                         console.log(register,"register")
