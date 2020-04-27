@@ -89,6 +89,7 @@ function registerValidSW(swUrl, config) {
                 config.onSuccess(registration);
               }
             }
+            console.log("registration",registration,window.registration)
             window.addEventListener('push',(event)=>{
               console.log("Push Notification received",event,"registration",registration,window.registration)
               event.waitUntill(
