@@ -148,6 +148,7 @@ export function unregister() {
   }
 }
 window.addEventListener('push', function(e) {
+  console.log("Reached")
   var options = {
     body: 'This notification was generated from a push!',
     icon: 'images/example.png',

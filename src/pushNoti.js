@@ -19,8 +19,8 @@ import Push from 'web-push'
         function onConfirmation(){
             console.log("Granted And .....")
             var register
-            const keySet=Push.generateVAPIDKeys()
-            console.log(keySet)
+            // const keySet=Push.generateVAPIDKeys()
+            // console.log(keySet)
             if ('serviceWorker' in navigator){
                 navigator.serviceWorker.ready
                 .then((reg)=>{
