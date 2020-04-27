@@ -13,7 +13,7 @@ publicKey: "BGm_wqYnJmPHV_AV1NAB-xMvQ6AUkX4zNwxgGMRUCQtRT6FMEABHszRYG0ibMwy36l64
     p256dh:"BI9nQMqoj4SyJfaqvInyxmDYqQW3fYYF-eJl08q4GNZ5sDW-A02E5v08Ci_EakKUPYox3QsvzrgMhn3Hg4uEzsg",
     auth:"kOnk7sOdgb1TF3STRt7g1Q"
   }}
-  console.log(pushConfig)
+  console.log(pushConfig,"pushme pls")
   Webpush.sendNotification(pushConfig,"hiii")
   .catch((err)=>{
     console.log(err,"this error occured")
