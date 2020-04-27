@@ -1,5 +1,5 @@
 import React from 'react'
-// import Push from 'web-push'
+import Push from 'web-push'
 // async function subsciber(){
 //   let sw=await navigator.serviceWorker.ready;
 //   console.log(sw,"sw --")
@@ -18,36 +18,38 @@ import React from 'react'
     const PushNoti =()=>{
         function onConfirmation(){
             console.log("Granted And .....")
-            var register
-            if ('serviceWorker' in navigator){
-                navigator.serviceWorker.ready
-                .then((reg)=>{
-                    register=reg
-                    //reg.showNotification("Successful TO get Notify By SW")
-                    return reg.pushManager.getSubscription()
-                })
-                .then((sub)=>{
-                    if(sub!==null)
-                    {
-                        console.log("Have subs")
-                    }
-                    else{
-                        console.log(register,"register")
-                        console.log(register.pushManager.subscibe,register.pushManager)
-                        register.pushManager.subscibe({
-                            userVisibleOnly:true,
-                            applicationServerKey:"BBDmJat38JYt-ovOyTyUqP7y0ruHXW7qa3PIkfHKDLeq4zPX9eo9RgNKqAbDg4D2rO7llqgvBgJhs822KFUGcRI"
-                        })
-                    }
-                })
-                .then((newSub)=>{
-                    console.log(newSub,"New Subscription")
-                })
-            }
-            else{
-                console.log("No service Worker")
-                new Notification("Successful TO get Notify")
-            }
+            //var register
+            const keySet=Push.generateVAPIDKeys()
+            console.log(keySet)
+            // if ('serviceWorker' in navigator){
+            //     navigator.serviceWorker.ready
+            //     .then((reg)=>{
+            //         register=reg
+            //         //reg.showNotification("Successful TO get Notify By SW")
+            //         return reg.pushManager.getSubscription()
+            //     })
+                // .then((sub)=>{
+                //     if(sub!==null)
+                //     {
+                //         console.log("Have subs")
+                //     }
+                //     else{
+                //         console.log(register,"register")
+                //         console.log(register.pushManager.subscibe,register.pushManager)
+                //         register.pushManager.subscibe({
+                //             userVisibleOnly:true,
+                //             applicationServerKey:""
+                //         })
+                //     }
+                // })
+                // .then((newSub)=>{
+                //     console.log(newSub,"New Subscription")
+                // })
+            // }
+            // else{
+            //     console.log("No service Worker")
+            //     new Notification("Successful TO get Notify")
+            // }
             
         }
 
