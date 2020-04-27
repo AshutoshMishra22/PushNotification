@@ -14,7 +14,7 @@ publicKey: "BGm_wqYnJmPHV_AV1NAB-xMvQ6AUkX4zNwxgGMRUCQtRT6FMEABHszRYG0ibMwy36l64
     auth:"kOnk7sOdgb1TF3STRt7g1Q"
   }}
   console.log(pushConfig)
-  Webpush.sendNotification(pushConfig)
+  Webpush.sendNotification(pushConfig,"hiii")
   .catch((err)=>{
     console.log(err,"this error occured")
   })
